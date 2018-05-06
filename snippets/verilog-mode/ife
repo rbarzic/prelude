@@ -1,0 +1,8 @@
+#name : if
+# --
+if ($1) begin
+  $0
+end
+else begin
+
+end

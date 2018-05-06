@@ -1,0 +1,4 @@
+#name : bit declaration
+# --
+bit ${1:signal};
+$0

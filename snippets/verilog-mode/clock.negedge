@@ -1,0 +1,5 @@
+#name : clocking block (negedge)
+# --
+clocking ${1:cb}@(negedge ${2:clock});
+$0
+endclocking: $1

@@ -1,0 +1,4 @@
+#name : logic declaration (Bus)
+# --
+logic [$1:${2:0}] ${3:signal};
+$0

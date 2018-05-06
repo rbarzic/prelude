@@ -1,0 +1,5 @@
+#name : UVM uvm_object derivation
+# --
+class ${1:`(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))`} extends uvm_object;
+$0
+endclass : $1

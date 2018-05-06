@@ -1,0 +1,3 @@
+#name : UVM field declaration for an integer
+# --
+`uvm_field_int(${1:FIELD_NAME},UVM_ALL_ON)

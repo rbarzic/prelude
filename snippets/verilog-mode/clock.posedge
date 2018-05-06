@@ -1,0 +1,5 @@
+#name : clocking block (posedge)
+# --
+clocking ${1:cb}@(posedge ${2:clock});
+$0
+endclocking: $1

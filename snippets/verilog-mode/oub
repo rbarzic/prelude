@@ -1,0 +1,4 @@
+#name : output declaration (bus)
+# --
+output [$1:${2:0}] ${3:from_to_signal};
+$0

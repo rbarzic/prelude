@@ -1,0 +1,3 @@
+#name : parameter declaration
+# --
+parameter ${1:param_name} = ${2:param_value};

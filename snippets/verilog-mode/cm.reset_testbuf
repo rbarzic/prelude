@@ -1,0 +1,9 @@
+#name : CM : cm_reset_testbuf
+# --
+cm_reset_testbuf U_${1:INSTANCE} (
+                                  .rst_out(${2:reset_out}),
+                                  .rst_in(${3:reset_in}),
+                                  // tests signal        
+                                  .rst_test(${4:reset_for_test}),
+                                  .rst_enable(${5:reset_enable}),        
+);

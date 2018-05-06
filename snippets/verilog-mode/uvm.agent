@@ -1,0 +1,41 @@
+#name : UVM agent class template
+# --
+class ${1:`(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))`} extends uvm_agent;
+     `uvm_component_utils($1)
+
+      protected uvm_active_passive_enum is_active = UVM_ACTIVE;
+      
+      ${2:MONITOR_CLASS}    monitor;
+      ${3:COLLECTOR_CLASS}  collector;
+      ${4:DRIVER_CLASS}     driver;
+      ${5:SEQUENCER_CLASS}  sequencer;
+
+     function new(string name, uvm_component parent);
+         super.new(name, parent);
+     endfunction
+
+  `uvm_component_utils_begin($1)
+  `uvm_field_enum(uvm_active_passive_enum,is_active,UVM_DEFAULT)
+  `uvm_component_utils_end
+
+
+  extern virtual function build();
+  extern virtual function connect();
+  
+
+endclass : $1
+
+  function void $1::build();
+      uvm_report_info(get_full_name(),"Build", UVM_LOW);
+      monitor   = $2::type_id::create("monitor",this);   
+      collector = $3::type_id::create("collector",this);   
+      if (is_active == UVM_ACTIVE) begin
+        driver    = $4::type_id::create("driver",this);   
+        sequencer = $5::type_id::create("sequencer",this);   
+      end
+  endfunction : build
+
+
+  function void $1::connect();
+
+  endfunction : connect

@@ -1,0 +1,8 @@
+#name : `ifndef GUARD_XXX; `define GURAD_XXX; `endif
+# --
+\`ifndef ${1:_`(upcase (file-name-nondirectory (file-name-sans-extension (buffer-file-name))))`_SV_}
+\`define $1
+
+$0
+
+\`endif // $1

@@ -1,0 +1,18 @@
+#name : Verilog module decalaration (empty I/O)
+#key : module
+# --
+module ${1:`(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))`};
+
+  $0
+
+  /*AUTOREG*/
+  /*AUTOWIRE*/
+
+endmodule // $1
+/*
+ Local Variables:
+ verilog-library-directories:(
+ "."
+ )
+ End:
+ */

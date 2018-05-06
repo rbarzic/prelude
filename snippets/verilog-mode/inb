@@ -1,0 +1,4 @@
+#name : input declaration (Bus)
+# --
+input [$1:${2:0}] ${3:from_to_signal};
+$0

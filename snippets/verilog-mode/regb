@@ -1,0 +1,4 @@
+#name : reg declaration (Bus)
+# --
+reg [$1:${2:0}] ${3:from_to_signal};
+$0

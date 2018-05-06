@@ -1,0 +1,7 @@
+#name : initial statement
+# --
+initial begin
+  $0 
+end
+  
+      

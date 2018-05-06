@@ -1,0 +1,8 @@
+#name : Verilog task decalaration
+# --
+task ${1:task_name_name};
+  begin
+  $0
+
+  end
+endtask // $1

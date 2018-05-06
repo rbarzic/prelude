@@ -1,0 +1,16 @@
+#name : UVM uvm_sequencer class template
+# --
+class ${1:CLASS_NAME}  extends uvm_sequencer #(${2:CLASS_SEQUENCE_ITEM});
+
+
+
+\`uvm_sequencer_utils($1)   
+
+function new(string name,uvm_component parent);
+  super.new(name,parent);
+  \`uvm_update_sequence_lib_and_item($2)
+endfunction : new   
+
+
+
+endclass: $1

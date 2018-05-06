@@ -1,0 +1,15 @@
+#name : UVM transaction class template
+# --
+class ${1:CLASS_NAME}  extends uvm_transaction;
+
+
+  function new(string name = "");
+         super.new(name);
+  endfunction : new   
+
+
+`uvm_object_utils_begin($1)
+
+`uvm_object_utils_end
+
+endclass: $1

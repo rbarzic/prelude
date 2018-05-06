@@ -1,0 +1,16 @@
+#name : UVM collector class template
+# --
+class  ${1:CLASS_NAME} extends uvm_component;
+       
+\`uvm_component_utils($1)
+
+uvm_analysis_port #(${2:TRANSFERT_CLASS}) ${3:item_collected_port};
+
+function new(string name, uvm_component parent);
+         super.new(name, parent);
+         item_collected_port = new("$3",this);
+endfunction : new
+
+
+endclass : $1
+

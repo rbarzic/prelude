@@ -1,0 +1,18 @@
+#name : UVM uvm_sequence class template
+# --
+class ${1:`(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))`} extends uvm_sequence #(${2:CLASS_SEQUENCE_ITEM});
+
+$2 ${3:SEQUENCE_ITEM_INSTANCE};
+
+function new(string name = "$1");
+  super.new(name);
+endfunction : new   
+
+\`uvm_sequence_utils($1, ${4:SEQUENCER_CLASS})   
+
+
+virtual task body();
+$0`uvm_do($3)
+endtask
+
+endclass: $1

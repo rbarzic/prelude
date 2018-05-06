@@ -1,0 +1,11 @@
+#name : always, using posedge clock and posedge reset
+#key : always
+# --
+always @(posedge ${1:clk} or posedge ${2:reset}) begin
+    if($2 == 1'b1) begin
+      /*AUTORESET*/
+    end
+    else begin
+      $0
+    end
+end

@@ -1,0 +1,5 @@
+#name : SV function
+# --
+function ${1:void} ${2:name}(${3:param});
+$0
+endfunction : $2

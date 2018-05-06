@@ -1,0 +1,7 @@
+#name : interface
+# --
+interface ${1:NAME}_if (input ${2:CLOCK}, input ${3:RESET});
+  $0
+endinterface : $1_if
+  
+      

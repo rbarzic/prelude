@@ -1,0 +1,12 @@
+#name : UVM monitor class template
+# --
+class  ${1:CLASS_NAME} extends uvm_monitor;
+
+     `uvm_component_utils($1)
+
+     function new(string name, uvm_component parent);
+         super.new(name, parent);
+     endfunction
+
+
+endclass : $1

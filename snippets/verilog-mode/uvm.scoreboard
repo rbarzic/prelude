@@ -1,0 +1,29 @@
+#name : UVM uvm_scoreboard class template
+# --
+
+\`uvm_analysis_imp_decl(_${1:RECEIVER})
+\`uvm_analysis_imp_decl(_${2:DRIVER})
+
+class ${3:CLASS_NAME}  extends uvm_scoreboard;
+
+  \`uvm_component_utils($3)   
+   
+  \`uvm_analysis_imp_$1 #(${4:RECEIVER_ITEM_CLASS}, $3) Rcvr2Sb_port;
+  \`uvm_analysis_imp_$2 #(${5:DRIVER_ITEM_CLASS}, $3)   Drvr2Sb_port;
+   
+  function new(string name, uvm_component parent);
+      super.new(name, parent);
+      Rcvr2Sb_port = new("Rcvr2Sb", this);
+      Drvr2Sb_port = new("Drvr2Sb", this);
+  endfunction : new
+   
+  virtual function void write_$1(input $4 xxxx);
+  endfunction : write_$1
+   
+  virtual function void write_$2(input $5 xxxx);
+  endfunction : write_$2
+   
+   $0
+
+
+endclass: $1

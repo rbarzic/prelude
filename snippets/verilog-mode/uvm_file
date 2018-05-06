@@ -1,0 +1,39 @@
+#name : Std ARV32 header
+# --
+//****************************************************************************/
+//                 PROPRIETARY INFORMATION OF ATMEL CORPORATION
+//
+//                     AVR32(R) RISC source code file.
+//                       Copyright Atmel Corporation
+//                                       
+//         The scope of use of the material contained herein is limited
+//         strictly to the terms of the LICENSE which grants permission
+//         for the use of the material.  Distribution of this material
+//            and all copies thereof to any entity other than to the
+//           EMPLOYEES of the Licensee, as the term is defined in the
+//        LICENSE, is strictly forbidden without a prior written consent
+//                            of Atmel Corporation.
+//****************************************************************************/
+//****************************************************************************/
+// 
+//  A V R 3 2
+//  RTL IMPLEMENTATION, UC3 PLATFORM
+//
+//  Filename        :  ${1:`(file-name-nondirectory (buffer-file-name))`}
+//  
+//  Project number  :  $2
+//  Module name     :  $3
+//  Description     :  ${4: Put a short descripton here}
+//                     
+//
+//  Author          :  ${5:`user-mail-address`}
+//  Date            :  ${6:`(current-time-string)`}
+//
+//****************************************************************************/
+
+\`ifndef ${7:_`(upcase (file-name-nondirectory (file-name-sans-extension (buffer-file-name))))`_SV_}
+\`define $7
+
+$0
+
+\`endif // $7

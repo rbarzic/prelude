@@ -1,0 +1,11 @@
+#name : always, using negedge
+#key : always
+# --
+always @(negedge ${1:clk_apb_n} or negedge ${2:rst_apb_n }) begin
+    if($2 == 1'b0) begin
+      /*AUTORESET*/
+    end
+    else begin
+      $0
+    end
+end

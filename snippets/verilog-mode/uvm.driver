@@ -1,0 +1,12 @@
+#name : UVM driver class template
+# --
+class ${1:`(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))`} extends uvm_driver #(${2:SEQ_ITEM_CLASS});
+     \`uvm_component_utils($1)
+
+     function new(string name, uvm_component parent = nul);
+         super.new(name, parent);
+     endfunction
+
+    
+
+endclass

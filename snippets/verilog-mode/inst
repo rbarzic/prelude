@@ -1,0 +1,10 @@
+#name : instanciation with template
+#key : inst
+# --
+ /* ${1:module_name} AUTO_TEMPLATE(
+   ); */
+  $1 U_${2:INSTANCE} (
+                      $0/*AUTOINST*/
+                      );
+        
+      

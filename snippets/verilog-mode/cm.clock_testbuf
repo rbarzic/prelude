@@ -1,0 +1,9 @@
+#name : CM : cm_clock_testbuf
+# --
+cm_clock_testbuf U_${1:INSTANCE} (
+                                  .clk_out(${2:reset_out}),
+                                  .clk_in(${3:reset_in}),
+                                  // tests signal        
+                                  .clk_test(${4:reset_for_test}),
+                                  .clk_enable(${5:reset_enable}),        
+);
